@@ -1,0 +1,283 @@
+*{margin: 0;padding: 0;}
+
+.cf:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+/* 높이가 필요한 부분에 class="cf" 넣어주면 된다. */
+
+.bigbox{
+  width:1000px;
+  border:5px solid tan;
+  margin: 0 auto; 
+  padding-bottom: 30px;
+}
+.bigbox h2{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.bigbox .box{
+  float:left;
+  border: 5px solid lime;
+  margin-left: 32px;
+  margin-top: 30px;
+  width:200px;
+  height:150px;
+}
+.bigbox .abox img{
+  display:block;
+  width:100%;
+}
+
+
+
+/* 두번 째 사진들 */
+.abigbox{
+    width:1000px;
+    border:5px solid tan;
+    margin: 0 auto; 
+    padding-bottom: 30px;
+  }
+  .abigbox h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .abigbox .abox{
+    float:left;
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width:200px;
+    height:150px;
+  }
+  .abigbox .abox img{
+    display:block;
+    width:100%;
+  }
+.abox1{
+    overflow: hidden;
+/* 지정한 박스 사이즈를 넘기지 않게 숨긴다. */
+}
+.abox1 img{
+    transform: scale(1);
+/* scale(1); 1이라는 크기를 지정해 놓는다. */
+    transition: all 0.3s;
+}
+.abox1:hover img{
+    transform: scale(3);
+/* img에 마우스를 올리면 3만큼 커진다. */
+}
+.abox2{
+    overflow: hidden;
+}
+.abox2{
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.abox2:hover{
+    transform: scale(3);
+}
+.abox3{
+    overflow: hidden;
+}
+.abox3 img{
+    transform: scale(1,2);
+/* x축 y축 크기를 1로 지정 */
+    transition: all 0.3s;
+}
+.abox3:hover img{
+    transform: scale(1,1.5);
+/* x축은 그대로이고 y축은 0.5 커지며 세로로 늘어난다. */
+}
+.abox4{
+    overflow: hidden;
+}
+.abox4 img{
+    transform: scale(2,1);
+/* x축 y축 크기를 1로 지정 */
+    transition: all 0.3s;
+}
+.abox4:hover img{
+    transform: scale(1,1.5);
+/* x축은 그대로이고 y축은 0.5 커지며 세로로 늘어난다. */
+}
+
+
+/* 세번 째 사진들 */
+.bbigbox{
+    width:1000px;
+    border:5px solid tan;
+    margin: 0 auto; 
+    padding-bottom: 30px;
+  }
+.bbigbox h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+.bbigbox .bbox{
+    float:left;
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width:200px;
+    height:150px;
+  }
+.bbigbox .bbox img{
+    display:block;
+    width:100%;
+  }
+.bbox1 img{
+    transform: rotate(0beg);
+    transition: all 0.3s;
+}
+.bbox1:hover img{
+    transform: rotate(1000deg);
+}
+.bbox2 img{
+    transform: rotateY(0beg);
+    transition: all 0.3s;
+}
+.bbox2:hover img{
+    transform: rotateY(1000deg);
+}
+.bbox3 img{
+    transform-origin: right top;
+/* 축의 기준 위치 right top 으로 지정해준거임 */
+    transform: rotate(0deg);
+    transition: all 5s;
+}
+.bbox3:hover img{
+    transform: rotate(100000deg);
+}
+.bbox4{
+    perspective: 200px;
+/* 원근감 */
+}
+.bbox4 img{
+    transform-origin: left top;
+    transform: rotateY(0beg);
+    transition: all 10s;
+}
+.bbox4:hover img{
+    transform: rotateY(1000deg);
+}
+
+
+
+/* 네 번 째 사진들 */
+.cbigbox{
+    width:1000px;
+    border:5px solid tan;
+    margin: 0 auto; 
+    padding-bottom: 30px;
+  }
+.cbigbox h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+.cbigbox .cbox{
+    float:left;
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width:200px;
+    height:150px;
+  }
+.cbigbox .cbox img{
+    display:block;
+    width:100%;
+  }
+.cbox1 {
+    position: relative;
+    overflow: hidden;
+}
+.cbox1 img{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    transition: all 0.5s;
+}
+.cbox1:hover img{
+    top: 0;
+}
+.cbox2 {
+    position: relative;
+    overflow: hidden;
+}
+.cbox2 img{
+    transform: translate(0, 150px);
+    transition: all 0.5s;
+}
+
+.cbox2:hover img{
+    transform: translate(0, 0);
+}
+
+.cbox3{
+    position: relative;
+    overflow: hidden;
+}
+.cbox3::before{
+    content: "Best 1 상품";
+    position:absolute;
+    width: 100%;
+    height: 30px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    bottom: -30px;
+/* 밑으로 -30만큼 이동 */
+    left: 0;
+    transition: all 0.1s;
+}
+.cbox3:hover::before{
+    bottom: 0;
+/* 마우스를 올릴시 밑에서 0의 높이까지 올라온다. */
+}
+.cbox4{
+    position: relative;
+}
+.cbox4::after{
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 255, 0.5);
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+.cbox4:hover::after{
+    width: 100%;
+}
+.cbox4 p{
+    width: 100%;
+    /* height:70%;
+    padding-top:30%; */
+    height:100%;
+    padding-top: 10%;
+    box-sizing: border-box;
+/* 박스 사이즈에 맞게 정렬 */
+    text-align: center;
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(255, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1;
+/* 우선 순위 매기기 (숫자가 높을수록 우선) */
+    background: url(../images/more.png) no-repeat 50% 80%;
+    opacity: 0;
+/* 불투명도 */
+}
+.cbox4:hover p{
+    opacity: 1;
+    transition: all 0.5s;
+}

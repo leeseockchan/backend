@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    table{
+        border: 1px solid #333;
+        border-collapse: collapse;
+        /* 두 개의 선이 합쳐진다. */
+        text-align: center;
+    }
+    td{
+        border: 1px solid #333;
+        padding: 10px 20px;
+        /* 안 여백 위아래 10px, 아래는 20px  */
+    }
+</style>
+
+
+</head>
+
+<body>
+    <table>
+        <caption>이거슨 표 제목 </caption>
+       <colgroup>
+            <col style="width: 150px">
+            <col style="width: 150px">
+            <col style="width: 300px">
+        
+        </colgroup>
+       
+        <tr>
+            <td rowspan="3">개인 정보</td>
+            <td>이 름</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>학과/학번</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>연락처</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>지원분야</td>
+            <td colspan="2"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>CSS 애니메이션</title>
+<!--[if lt IE 9]>
+<script src="html5shiv.js"></scirpt>
+<![endif]-->
+<style>
+   *{margin: 0px; padding: 0px;}
+
+  .container {
+    width:320px;
+    height: 240px;
+    margin:50px auto;
+  }
+  .photo {
+    border:1px solid #ccc;
+  }
+  .container:hover{
+    transform: rotate(20deg);
+  }
+  .container:hover .photo{
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <img src="images/coffee.jpg" class="photo">
+  </div>
+</body>
+</html>

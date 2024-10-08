@@ -1,0 +1,105 @@
+*{margin: 0px; padding: 0px;}
+
+h2{
+    text-align: center;
+}
+.hite{
+    width:1248px;
+    height:1020px;
+    border: 1px solid #333;
+    margin: 100px auto 0;
+}
+
+.jinro{
+        width: 260px;
+        height: 260px;
+        position: absolute;
+        display: none;
+    
+}
+.jinro img{
+    display: block;    
+}
+
+.soju{
+    top: 0;
+    left: 0;
+    display: block;
+}
+.peop{
+    top: 270px;
+    left: 0;
+    display: block;
+}
+.tera{
+    height: 530px;
+    top: 0;
+    display: block;
+}
+.phone{
+    width: 260px;
+    height: 260px;
+    display: block;
+}
+.max{
+    width: 260px;
+    height: 260px;
+    display: block;
+}
+.extra{
+    width: 530px;
+    height: 260px;
+    display: block;
+}
+.cham{
+    width: 260px;
+    height: 260px;
+    display: block;
+}
+.share{
+    width: 530px;
+    height: 260px;
+    display: block;
+}
+.pact{
+    width: 260px;
+    height: 260px;
+    display: block;
+}
+
+
+.jinro::before{
+    content:"";
+    width:0%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,255,0.5);
+    transition:all 0.4s;
+}
+.jinro:hover::before{
+    width: 100%
+}
+
+.jinro p{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 30px;
+    box-sizing: border-box;
+    /* border, padding 포함 100%; */
+    color: #fff;
+    text-align: center;
+    transition: all 0.4s;
+    /* 투명도 0 */
+    opacity: 0;
+    background: url(../images/more.png) no-repeat 50% 80%;
+}
+
+.jinro:hover p{
+    /* 투명도 1 */
+    opacity: 1;
+}

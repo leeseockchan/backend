@@ -1,0 +1,97 @@
+*{margin:0;padding:0;}
+ul, li{list-style:none;}
+a{text-decoration:none;color:#bbb;}
+img{border:0;}
+
+
+header{
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.top-bar{
+    display: block  ;
+}
+.top-bar ul{
+    position: absolute;
+    right: 100px;
+}
+.top-bar ul li{
+    float: left;
+}
+.top-bar ul li a{
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.logos{
+    position: absolute;
+    width: 170px;
+    height: 70px;
+    top: 100px;
+    float: left;
+}
+
+        /* 메인 메뉴 */
+nav{
+    position:absolute;
+    width: 100%;
+    top: 96px;
+    height: 60px;
+    border-bottom:1px solid #333;
+    background-color: #fff;
+}
+nav>ul{
+    width: 1300PX;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+nav>ul>li{
+    float: left;
+    position: relative;
+    z-index: 5;
+}
+
+nav>ul>li>a{
+    display: block;
+    width: 171px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+        /* 서브 메뉴 */
+nav ul li ul li a{
+    display: block;
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+nav ul li ul{
+    background-color: #fff;
+    position: absolute;
+    top: 61px;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.menuShadow{
+    position: absolute;
+    height: 0px;
+    width: 100%;
+    background-color: #fff;
+    top: 61px;
+    transition: all 0.3s;
+}
+nav ul:hover li ul{
+    height: 200px;
+}
+nav > ul:hover + .menuShadow{
+    height: 200px;
+}
+

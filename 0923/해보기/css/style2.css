@@ -1,0 +1,38 @@
+*{margin:0; padding:0;}
+div{
+    padding: 20px;
+    border:1px solid #ccc;
+}
+
+#container{
+    width: 960px;
+    margin:0 auto;
+}
+#header{
+    padding:20px;
+    margin-bottom: 20px;
+}
+#left_sidebar{
+    width: 150px;
+    float:left;
+    margin-bottom:20px;
+    margin-right:20px;
+    text-align: center;
+    padding-left: 30px;
+}
+#contents{
+    width:490px;
+    float:left;
+    margin-bottom: 20px;
+}
+#right_sidebar{
+    width: 150px;
+    float:right;
+    margin-bottom:20px;
+    text-align: center;
+    padding-left: 30px;
+}
+#footer{
+    clear: both;
+    padding:30px 20px;
+}

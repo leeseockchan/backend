@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript</title>
+<script>
+    var a = '5';
+    var b = 5;
+
+    console.log(a==b);  //true   문자와 숫자를 구분 하지 않기 때문에 true
+    console.log(a===b); //false  문자형과 숫자형이기 때문에 false 출력
+
+    var x = 10;
+    var y = 5;
+
+    x += y;     //x + y     -> 15
+    x *=2;      //x 곱하기 2 -> 30
+    console.log(x);
+
+    var i = true;   
+    var j = false; 
+
+    console.log(i && j); // and 연산자 이기 때문에 하나라도 false
+    console.log(i || j); // or 연산자 이기 때문에 하나라도 true가 있으면 true
+    console.log(!i);     //부정 결과의 반대값이 출력 -> false
+
+    let age = prompt("나이를 입력해주세용~~~~", "당신의 나이는?");
+    let message = age <18 ?"성인 입니다.":"미성년자 입니다.";
+    console.log(message);
+
+    var price1 = 3000;
+    var price2 = 6000;
+    var price3 = 3000;
+
+    var money = prompt("지출한 금액을 입력 하시오", "--원");
+    var say = money < 10000 ? money -10000+"원 초과했어요~":"돈 관리를 잘하셔쎄요~";
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

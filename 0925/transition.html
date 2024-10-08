@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0px; padding: 0px;}
+
+.abigbox{
+    width: 1000px;
+    height: 250px;
+    border: 5px solid tan;
+    margin: 30px auto;
+    position:  relative;
+}
+
+.abox img{
+    display: block;
+}
+
+
+.abox{
+    width: 200px;
+    height: 150px;
+    border: 1px solid #333;
+    float: left;
+    margin-left: 40px;
+    position: relative;
+}
+/* 그림자 효과 */
+.abox .sun{
+    width: 200px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.abox:hover .sun{
+    background-color: rgba(0, 0, 0, 0, 4);
+}
+
+</style>
+
+</head>
+<body>
+    <div class="abigbox">
+        <h2>입양 합시다!</h2>
+        <div class="abox abox1">
+            <img src="images/d1.jpg" alt="강아지1">
+            <p class="sun"></p>
+        </div>
+        <div class="abox abox2">
+            <img src="images/d2.jpg" alt="강아지2">
+        </div>
+        <div class="abox abox3">
+            <img src="images/d3.jpg" alt="강아지3">
+        </div>
+        <div class="abox abox4">
+            <img src="images/d4.jpg" alt="강아지4">
+        </div>
+    </div>
+</body>
+</html>

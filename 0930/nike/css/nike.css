@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Play:wght@400;700&display=swap');
+
+
+/* reset css */
+*{margin:0;padding:0;}
+ul{list-style:none;}
+a{text-decoration:none;color:#bbb;}
+img{border:0;}
+
+/* 풀스크린으로 동작하도록 지정(가로/세로 스크롤바 제거) */
+body{
+    position: fixed;
+    width:100%;
+    height:100%;
+    background-color: #111;
+}
+/* 동영상 (.vid) 스타일 */
+.vid{
+    position: fixed;
+    width:100%;
+    height:100%;
+    opacity: 0.9;
+    left:0;
+    top:0; 
+}
+.vid video{
+    width:100%;
+    min-width: 1920px;
+    position: relative;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+h1{
+    position: fixed;
+    top:40px;
+    left:50px;
+    z-index: 10;
+}
+
+header{
+    position: fixed;
+    width: 700px;
+    height:100%;
+    background: linear-gradient(-45deg, #e6fc55,#b9fb05,#97e031);
+    transform: skewX(-40deg);
+    left:-400px;
+}
+#gnb{
+    width:220px;
+    position: absolute;
+    right:0;
+    top:150px;
+}
+
+#gnb > li{
+    position: relative;
+}
+#gnb > li >a{
+    display: block;
+    width:220px;
+    height:50px;
+    font:bold 18px/3 play;
+    /* 글자:진하게 크기18 줄간격 3배 글씨체 play */
+    box-sizing: border-box;
+    text-align: right;
+    padding-right: 40px;
+    color:#222;
+}
+#gnb em{
+    display: inline-block;
+/* 박스로 만들어야 각도를 줄수 있다 */
+    transform: skewX(40deg);
+ /* 전체 header -40deg -> 40deg 글자 제대로 보임 */
+}
+/* 메뉴에 마우스를 올렸을 시 바탕색은 검정, 글씨는 흰색으로 표시 */
+#gnb > li.on >a, #gnb > li:hover >a{
+    background-color: #111;
+    color:#fff;
+}
+
+#gnb li ul{
+    position: absolute;
+    left: 0px;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+   /* dispaly: none 과 비슷 없던 것이 생긴다.*/
+    transition: all 0.6s;
+}
+
+/* #gnb li:nth-child(2) ul{
+    visibility: visible;
+} */
+
+#gnb ul a{
+    display: block;
+    width: 150px;
+    background-color: #222;
+    font: bold 16px/2.5 arial;
+    color: #fff;
+    box-sizing: border-box;
+    padding-left: 50px;
+    margin-bottom: 3px;
+    transition: all 0.6s;
+    border-bottom: 1px solid #69fb05;
+}
+
+#gnb li:hover ul{
+    left: 220px;
+    opacity: 1;
+    visibility: visible;
+    
+/* 왼쪽에서 오른쪽으로 움직이면서 서서히 나타남 */
+}
+
+#gnb ul a:hover{
+    background-color: #b9fb95;
+/* 서브 메뉴에 색상을 지정 */
+    color: #333;
+}
+
+    /* 버튼 스타일 */
+#sns{
+    position: fixed;
+    top: 60px;
+    right: 50px;
+}
+
+#sns li{
+    float: left;
+    margin-right: 30px;
+}
+/* sns버튼 (웹폰트 아이콘) 스타일 */
+#sns .fa{
+    font-size: 25px;
+    color: #69fb05;
+    opacity: 0.6;
+    transition: all 0.6s;
+}
+#sns .fa:hover{
+    opacity: 1;
+    transform: scale(1.2);
+/* 크기가 1 -> 1.2로 커진다. */
+}
+
+        /* 텍스트 상자(section)스타일 */
+.txtBox{
+    width: 340px;
+    height: 280px;
+    position: fixed;
+    top: 200px;
+    right: 70px;
+    border:1px solid #fff;
+}
+.txt{
+    position: absolute;
+    top: 200px;
+    right: 0;
+    color: #fff;
+    font-size: 34px;
+    font-family: play;
+    letter-spacing: -1px;
+    /* 자간 -> 글자의 간격을 뜻함 */
+}
+.txt strong{
+    color: #b9fb05;
+    font: bold 34px arial;
+    margin-left: 20px;
+}
+
+        /* 우측 50 숫자 */
+.tit{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 160px;
+    color: #69fb05;
+    font-family: monoton;
+    letter-spacing: -1px;
+}
+        /* 우측 50 옆 /24 */
+.tit em{
+    font-size: 50px;
+    font-family: play;
+    color: #fff;
+}
+
+/* 컨텐츠 박스 스타일 */
+#side{
+    position: fixed;
+    bottom: 0;
+    width: 800px;
+    height: 100%;
+    background-color: #111;
+    transform: skewX(-40deg);
+    opacity: 0.5;
+    transition: all 0.6s;
+    right: -800px;
+}
+#side:hover {
+    right: -500px;
+    opacity: 0.8;
+}
+#side .con{
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    left: 150px;
+    bottom: 0;
+    background-color: #000;
+    padding: 10px;
+    transition: all 1s;
+}
+#side:hover .con{
+    left: 50px;
+}
+#side .con p{
+    width: 300px;
+    height: 100px;
+    left: 50px;
+    position: absolute;
+    bottom: 0;
+}
+/* 우측 첫번째 사진*/
+#side .con p:nth-child(1){
+    bottom: 270px;
+    transform: translateX(200px);
+    transition: all 0.4s ease;
+}
+/* 우츨 두번째 사진 */
+#side .con p:nth-child(2){
+    bottom: 160px;
+    transform: translateX(200px);
+    transition: all 0.8s ease;
+}
+/* 우측 세번째 사진 */
+#side .con p:nth-child(3){
+    bottom: 50px;
+    transform: translateX(200px);
+    transition: all 1.2s ease;
+}
+#side .con:hover p{
+    transform: translateX(0);
+}
+#side .con p em{
+    display: inline-block;
+    color: #a0bd50;
+    transform: skewX(40deg);
+    font: bold 16px/1.7 arial;
+    /* 글자: 굵게 16px 1.7->글자 간격 글꼴 */
+}
+#side .con p img{
+    width: 300px;
+    height: 70px;
+    opacity: 0.3;
+    transform: all 0.6s;
+    /* .con의 사진을 0.3의 투명도를 입힌다. */
+}
+#side .con p img:hover{
+    opacity: 1;
+    /* 마우스를 올렸을 때 투명하지 않게 나타낸다. */
+}
+
+/* 자동 롤링 버튼 (더블 화살표 효과) */
+#side .btn{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    color: #b9fb05;
+    transform: skewX(40deg);
+    border: 1px solid #fff;
+}
+.btn i{
+    font-size: 60px;
+    position: absolute;
+    right: 0;
+}
+
+.btn i:nth-child(1){
+    animation: arrow linear 1.5s 0s infinite;
+}
+.btn i:nth-child(2){
+    animation: arrow linear 1.5s 1.5s infinite;
+}
+.btn i:nth-child(3){
+    animation: arrow linear 1.5s 3s infinite;
+}
+@keyframes arrow{
+    0%{
+        right: 0; transform: scale(1); opacity: 1;
+    /* 0%일 때 right 0에서  scale(1)로 원래의 모습으로  */
+    }  
+    100%{
+        right: 100px; transform: scale(1.5); opacity: 0;
+    /* 100%일 때는 right: 100px로 이동하며 scale(1.5)크기로 커지며 투명해진다. */
+    }
+}
