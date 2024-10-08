@@ -1,0 +1,73 @@
+*{margin: 0;padding:0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color:#555;}
+.cf:after{
+    content: '';
+    display: block;
+    clear:both;
+}
+
+section{
+    width: 100%;
+}
+.title{
+    width:1200px;   
+    margin: 0 auto;
+    padding: 20px   0;
+    line-height: 1.5;
+}
+.title h2{
+    color: #333;
+    font-size: 28px;
+}
+section .pic ul{
+    display: flex;
+    justify-content: space-between;
+}
+section .pic{
+    width:1200px;
+    height:513px;
+    margin: 0 auto;
+}
+
+section .pic ul li{
+    width:224px;
+    height:376px;
+}
+section .pic ul li .pictor{
+    width:224px;
+    height:250px;
+    margin-top: 40px;
+}
+section .pic ul li .pictor img{
+    width: 100%;
+}
+section .pic ul li .content{
+    margin-top: 20px;
+}
+
+/* 상품 이름 */
+section .pic ul li a .text{
+    font-size: 16px;
+    color: #333333;
+
+}
+/* 상품 원래의 가격  */
+section .pic ul li a .prisale{
+    width: 224px;
+
+}
+/* 할인 된 퍼센트 */
+section .pic ul li a .sale_per{
+    color: #ff6733;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* 상품의 가격 */
+section .pic ul li a .price{
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+}
