@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/slide1.css">
+
+</head>
+<body>
+    <header>
+
+    </header>
+    <div class="slide-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="img/slide1.jpg" alt="slide1">
+            </div>
+            <div class="slide">
+                <img src="img/slide2.jpg" alt="slide2">
+            </div>
+            <div class="slide">
+                <img src="img/slide3.jpg" alt="slide3">
+            </div>
+        </div>
+        <button class="prev" onclick="previousSlide()">Previous</button>
+        <button class="next" onclick="nextSlide()">Next</button>
+    </div>
+    <script>
+        const slider = document.querySelector('.slider');
+        // querySelector -> 첫 번째 일치하는 요소 .slider 한개 밖에 없으므로 한개만 선택
+        const slides = document.querySelectorAll('.slide');
+        // querySelectorAll -> 모든 일치하는 .slide 세개 다 선택 됨
+
+
+        var currentIndex = 0;
+
+        function showSlide(index){
+        if(index < 0){
+            currentIndex = slides.length -1;
+        //index 번호가 0보다 작으면 
+        //slides.length -> 현재는 3장의 사진 -1 => 2
+        //currentIndex에 2를 넣어 맨 마지막 사진으로 슬라이드 됨
+        }else if(index >= slides.length){
+            currentIndex = 0;
+        //사진이 맨마지막일대 next를 클릭하면 index =3이므로
+        //currentIndex에 0을 넣어 첫번째 사진으로 슬라이드
+        }else{
+            currentIndex = index;
+        }
+        
+        // alert(currentIndex);
+        //숫자 증가하는지 확인하기 위해 입력했음.
+        var transformValue = -currentIndex * 100 + '%';
+        // 100을 곱해주고 %를 붙여줌으로써 -100%, -200%, -300%, ...으로 나온다.
+        // alert(transformValue);
+        slider.style.transform = "translateX("+transformValue+")";
+       }
+        function nextSlide(){
+            showSlide(currentIndex+1);
+        }
+        function previousSlide(){
+            showSlide(currentIndex-1);
+        }   
+    
+
+     </script>
+</body>
+</html>

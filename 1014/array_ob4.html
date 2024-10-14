@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요일 배열</title>
+<script>
+    var days = ["일", "월", "화", "수", "목", "금", "토"];
+    var today = new Date();
+    var day = today.getDay();   //일요일 = 0, 월요일 = 1, 화요일 = 2, ...
+    // alert(day);
+    var yoil = days[day];
+    document.write(yoil + "요일 <br>");
+
+    var money = [1000,2000,500,10000,7500];
+    var total = 0;
+    // total이라는 변수에 0이라는 값을 넣어줍니다
+    for(var i=0; i<money.length; i++){
+    // 변수 i에 0이라는 값을 만들어 주고 i는 money의 길이보다
+    // 작게 i를 증가시킨다.
+        // document.write(money[i],"<br>");
+        total = total + money[i];
+    // total= total이라는 0에 money의 배열 수를 전부 합한다.
+    }
+    document.write(total);
+
+    
+
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

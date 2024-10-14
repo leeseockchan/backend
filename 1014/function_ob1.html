@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function 연습</title>
+<script>
+    var count = 0;
+
+    myFnc();
+    function myFnc(){
+        count++;
+        document.write("hello" + count + "<br>");
+    }
+    myFnc();
+
+
+    // var theFnc = function(){
+    //     // 이름 없는 익명 함수
+    //     count++;
+    //     document.write("bye" + count + "<br>");
+    // }
+    var theFnc = () =>{
+        count++;
+        document.write("bye" + count + "<br>");
+    } 
+    theFnc();
+    
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
