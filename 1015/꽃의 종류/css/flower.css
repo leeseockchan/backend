@@ -15,7 +15,11 @@
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
+.bbox{
+    display: flex;
+    flex-wrap: wrap;
+    /*  */
+}
 .flower {
     width: 260px;
     height: 250px;
@@ -23,17 +27,21 @@
     display: inline-block;
     margin: 30px 30px;
 }
-.flower h3{
+
+.flower h3 {
     margin: 10px;
 }
-.flower h3 img{
+
+.flower h3 img {
     margin: 0 5px;
 }
-.flower p{
+
+.flower p {
     margin-top: 10px;
     font-size: 12px;
     padding: 10px;
 }
+
 .flo1 {
     background-color: purple;
 }
