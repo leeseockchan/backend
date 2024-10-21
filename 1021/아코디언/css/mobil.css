@@ -1,0 +1,65 @@
+*{margin: 0;padding:0;}
+ul {
+    list-style: none;
+}
+header{
+    width: 100%;
+    height: 70px;
+    position: relative;
+    background-color: skyblue; 
+}
+header h1 {
+    line-height: 70px;
+    height: 70px;
+    text-align: center;
+}
+header p.ham{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    right: 10px;
+    border: 1px dotted #333;
+    text-indent: -9999px; 
+    background: url(../img/ham.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+header p.ham.on{
+    background: url(../img/bar.png) no-repeat 50% 50%;
+}
+nav {
+    width: 200px;
+    background-color: lime;
+    padding: 10px 0;
+    position: absolute;
+    top:70px;
+    right:-200px;
+    transition: all 0.3s;
+}
+nav.active{
+    right:0;
+}
+nav ul li{
+    text-align: center;
+    background-color: #cf9;;
+}
+nav>ul>li>a{
+    background-color: lime;
+}
+nav ul li a{
+    display: block;
+    line-height: 40px;
+    height:40px;
+    color:#222;
+    text-decoration: none;
+}
+
+nav ul li ul li a:hover{
+    background-color: #cf0;;
+}
+nav ul li .sub{
+    height:0;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
