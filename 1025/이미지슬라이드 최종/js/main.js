@@ -43,6 +43,31 @@ $(function(){
         $('.pager li').eq(i).addClass('on');
     });
 
+    function timer(){
+        if(i == 5){
+            i=0;
+            $(".imgs").css("margin-left",0);
+        }
+        i++;
+        $(".imgs").stop().animate({
+            "margin-left":-i*100+"%"
+        },600);
+        if(i==5){
+            $(".pager li").removeClass("on");
+            $(".pager li").eq(0).addClass("on");
+        }else{
+            $(".pager li").removeClass("on");
+            $(".pager li").eq(i).addClass("on");
+        }
+    }
 
+    var id = setInterval(timer, 2000);
+
+    $('#wrap').mouseover(function(){
+        clearInterval(id);
+    });
+    $('#wrap').mouseleave(function(){
+        id = setInterval(timer, 2000);
+    });
 
 });
