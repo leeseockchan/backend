@@ -32,5 +32,17 @@ $(function(){
         $('.pager li').eq(i).addClass('on');
     });
 
+    $('.prev').click(function(){
+        if(i == 0){
+            i=5;
+            $('.imgs').css('margin-left',-i*100+'%');
+        }
+        i--;
+        $('.imgs').stop().animate({'margin-left':-i*100+'%'},600);
+        $('.pager li').removeClass('on');
+        $('.pager li').eq(i).addClass('on');
+    });
+
+
 
 });
