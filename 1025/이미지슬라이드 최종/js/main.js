@@ -1,0 +1,24 @@
+$(function(){
+
+    var clone = $('.imgs li').eq(0).clone();
+//  .imgs 안에 li 중 첫번째 (인덱스0번) li를 복제 실행
+    $('.imgs').append(clone);
+// .imgs 선택자에서 자식요소로 clone에 저장된 요소를 추가
+    var i = 0;
+    var repeat;
+
+    $('.pager li').click(function(){
+        i = $(this).index();
+        $('.imgs').stop().animate({'margin-left':-i*100+"%"},500);
+        $('.pager li').removeClass('on');
+        $(this).addClass('on');
+        move(i);
+    });
+
+    $('.next').click(function(){
+        $(this).move(i);
+        
+    });
+
+
+});
