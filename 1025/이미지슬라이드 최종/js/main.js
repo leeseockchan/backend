@@ -16,8 +16,20 @@ $(function(){
     });
 
     $('.next').click(function(){
-        $(this).move(i);
-        
+        i++;
+        if(i == 5){
+            $('.imgs').stop().animate({'margin-left':-i*100+'%'},600,
+                function(){
+                    $('.imgs').css('margin-left',0);
+                }
+            );
+            
+            i=0;
+        }else{
+            $('.imgs').stop().animate({'margin-left':-i*100+'%'},600);
+        }
+        $('.pager li').removeClass('on');
+        $('.pager li').eq(i).addClass('on');
     });
 
 
