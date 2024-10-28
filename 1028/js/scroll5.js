@@ -15,7 +15,18 @@ $(function () {
         }
 
         if(sct >= 2500){
-            $('.s4_cover').addClass('active');
+            setTimeout(function(){
+                $('.s4_1').addClass('active');
+            }, 0);
+            setTimeout(function(){
+                $('.s4_2').addClass('active');
+            }, 400);
+            setTimeout(function(){
+                $('.s4_3').addClass('active');
+            }, 800);
+            setTimeout(function(){
+                $('.s4_4').addClass('active');
+            }, 1200);
         }
 
         
