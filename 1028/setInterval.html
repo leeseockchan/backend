@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1 class="count">0000</h1>
+    <button type="button" onclick="clearInterval(id)">멈추기</button>
+
+    <script>
+        var num = 0;
+        var id;
+
+        id = setInterval(autoCount, 1000);
+        function autoCount() {
+            num++;
+            $('.count').html(num);
+        }
+
+    </script>
+</body>
+
+</html>
