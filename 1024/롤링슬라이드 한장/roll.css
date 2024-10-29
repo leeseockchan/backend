@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    border: none;
+    vertical-align: top;
+  }
+
+  ul,
+  li {
+    list-style: none;
+  }
+
+  #wrap {
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+
+  }
+
+  header {
+    height: 200px;
+    background-color: #ccc;
+  }
+
+  .img_slide {
+    width: 960px;
+    height: 400px;
+    position: relative;
+  }
+
+  #banner {
+    width: 5000px;
+  }
+
+  /*960*4  = 3840 + 960(복제) = 4800 - 여유있게 */
+  #banner li {
+    float: left;
+  }
+
+  .prev {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 10px;
+    top: 50%;
+    margin-top: -50px;
+  }
+
+  .next {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 10px;
+    top: 50%;
+    margin-top: -50px;
+  }
