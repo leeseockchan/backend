@@ -18,44 +18,75 @@ a {
 
 #wrapper {
     width: 100%;
+    margin: 0 auto;
     position:relative;
 }
 
 #header {
     width: 100%;
-    text-align: center;
+    padding: 15px;
 }
-#header img{
+/*  로고 스타일  */
+#header a img{
+    margin: 30px 45%;
     width: 252px;
     height: 52px;
-    margin: 50px auto;
 }
 
-
-/* 메인 메뉴 */
+/* 메인 메뉴 스타일*/
 .mainMenu{
     position: absolute;
-    margin: 0 auto;
+    display: flex;
     left: 0;
+    padding: 0;
     width: 100%;
     height:70px;
     border-bottom: 1px solid #ddd;
-    border-top: 1px solid #ddd;
 }
-
-.mainMenu ul  li span{
+.mainMenu > ul {
     position: relative;
-    color: red;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
+    display: block;
+    width: 1000px;
+    margin: 0 auto;
     
 }
-
-.mainMenu ul li a {
+.mainMenu > ul > li{
+    float:left;
+}
+/* 메인 메뉴 리스트 스타일*/
+.mainMenu > ul > li > a{
     display: block;
+    width: 200px;
+    height:80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* 서브 메뉴 리스트 스타일  */
+.sub li a{
+    display: block;
+    padding-top: 20px;
+    font-size: 15px;
     color: #333;
-    text-indent: 25px;
-    margin: 15px auto;
+    text-align: center;
+}
+
+.mainMenu ul li ul{
+    position: absolute;
+    width: 200px;
+    height: 0;
+    display: none;
+    transition: all 0.3s;
+}
+.mainMenu:hover ul li ul{
+    display: block;
+
+}
+/* 서브 메뉴 강아지 발바닥 */
+.mainMenu ul li ul a:hover{
+    background: url(../img/menu_hover.png) no-repeat left;
 }
 
