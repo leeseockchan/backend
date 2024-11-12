@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/homew.css">
+</head>
+
+<body>
+    <div id="bnner">
+        <ul id="slide">
+            <li><a href="#"><img src="img/slide1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/slide2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/slide3.jpg" alt=""></a></li>
+        </ul>
+    </div>
+
+    <script>
+        var list = document.getElementById('silde');
+        var ulLi = document.querySelectorAll('#slide li');
+        var show_pic = 1;       // 보여지는 사진의 갯수
+        var show_win = 3;
+
+        var li_width = 1200;
+
+        var num = 0;
+
+                            
+        
+
+
+        function autoplay() {
+            if (num == 3) {
+                num = 0;
+                list.style.transition = 'none';
+                list.style.marginLeft = 0;
+            }
+
+            setTimeout(function () {
+                num++;
+                list.style.transition = 'margin-left 0.5s';
+                list.style.marginLeft = -li_width * num + "px";
+            }, 50);
+        };
+        setInterval(autoplay, 2000);
+    </script>
+</body>
+
+</html>

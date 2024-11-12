@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0px; padding: 0px;}
+#myball{
+    position: relative;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 1px solid black;
+    background: url(./img/f1.png) no-repeat 50% 50%;
+    animation-name: myani;
+/* @keyframes로 설정 해놓은 중간 상태의 이름을 지정 */
+    animation-duration: 10s;
+/* 애니메이션의 실행 시간 설정 */
+    animation-iteration-count: 10000;
+/* 애니메이션의 반복 횟수를 지정 */
+}
+@keyframes myani{
+    0%{left:10px;}
+    100%{left:500px;}
+}
+
+</style>
+
+</head>
+<body>
+    <div id="myball"></div>
+</body>
+</html>

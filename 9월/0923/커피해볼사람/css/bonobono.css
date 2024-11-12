@@ -1,0 +1,107 @@
+*{margin: 0;padding: 0;}
+    .bigbox{
+        width: 500px;
+        height: 500px;
+        position: relative;
+        border: 1px dotted #333;
+        margin: 100px auto 0; /*좌우 중앙정렬 auto 위 100아래 0*/
+    }
+.face{
+    position:absolute;
+    width : 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: #4b72f3;
+    bottom: 0;
+    border: 10px solid #333;
+    box-sizing: border-box;
+
+}
+.eyeball{
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 160px;
+}
+.eyeball.left{
+    left: 100px;
+}
+.eyeball.right{
+    right: 100px;
+}
+.nose{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 310px;
+    left: 50%;
+    margin-left: -20px;
+    z-index: 1;
+}
+.mouth{
+    width: 80px;
+    height: 74px;
+    border: 7px solid #000;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: absolute;
+    top: 320px;
+
+}
+.mouth.left{
+    left: 175px;
+}
+.mouth.right{
+    right: 175px;
+}
+.beard{
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    top: 50px;
+    left: 20px;
+    background-color: #000000;
+}
+.beard.left1{
+    left:75px;
+    top: 330px;
+    transform-origin: right center;
+    transform: rotate(-20deg);
+}
+.beard.left2{
+    left:60px;
+    top: 300px;
+    transform-origin: right center;
+    transform: rotate(0deg);
+}
+.beard.left3{
+    left:75px;
+    top: 280px;
+    transform-origin: right center;
+    transform: rotate(20deg);
+}
+.beard.right1{
+    left:270px;
+    top: 330px;
+    transform-origin: left center;
+    transform: rotate(20deg);
+}
+.beard.right2{
+    left:280px;
+    top: 300px;
+    transform-origin: left center;
+    transform: rotate(0deg);
+}
+.beard.right3{
+    left:270px;
+    top: 280px;
+    transform-origin: left center;
+    transform: rotate(-20deg);
+}

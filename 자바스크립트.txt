@@ -1,0 +1,138 @@
+2024.10.11
+
+var
+maxNum = Math.max(10,5,8,30), //최대값
+minNum = Math.min(10,5,8,30), //최소값
+roundNum = Math.round(num),   //소수점 첫째 자리 반올림
+floorNum = Math.floor(num),   //소수점 첫째 자리 내림
+ceilNum = Math.ceil(num),     //소수점 첫째 자리 올림
+rndNum = Math.random(),       //0과 1 사이의 난수 발생
+piNum = Math.PI;              //원주율 상수를 반환
+
+
+2024.10.14
+
+// querySelectorAll -> 모든 일치하는 .slide 세개 다 선택 (예제엔 3개 뿐)
+// querySelector -> 첫 번째 일치하는 요소 .slider 한개 밖에 없으므로 한개만 선택(예제엔 한개뿐)
+
+
+2024.10.15
+ location.reload(); // 새로 고침
+
+// class를 호출 할때 classList를 사용해야 한다.
+
+.classList.add('클래스명');
+클래스에 추가를 할때 사용한다
+
+.classList.remove('클래스명');
+클래스에서 삭제를 할때 사용한다.
+
+css에서 class를 적용하면 따로 class를 선언하지 않아도 된다.
+
+
+2024.10.16
+
+함수를 만드는 이유 : 코드를 언제든지 재사용 또는 호출하여 사용이 가능하다.
+		// 코드 재사용: 동일한 작업을 반복하지 않고 함수를 호출하여 사용할 수 있습니다.
+		// 코드 가독성 향상: 복잡한 로직을 함수로 분리하여 코드를 더 쉽게 이해할 수 있습니다.
+		// 유지보수 용이: 함수 단위로 수정이 가능하여 프로그램 전체를 수정할 필요가 없습니다.
+		// 추상화: 복잡한 내부 구현을 숨기고 간단한 인터페이스만 제공할 수 있습니다.
+
+2024.10.17
+.
+function constExample() {
+
+    // var y = 5;
+    // y = 10;      var는 재할당이 가능
+    // var y = 20;  var는 재선언이 가능
+
+    // let y = 5;
+    // y = 10;      let도 재할당이 가능
+    // let y = 30;  let은 재선언이 불가능
+
+    // const y = 10;
+    // y = 20;      const는 재할당이 불가능
+    // const y = 30;const는 재선언이 불가능
+
+    document.write(y, "<br>");
+}
+constExample();
+
+
+2024.10.18
+
+◎ append() - 컨텐츠를 선택된 요소 내부의 끝 부분에서 삽입
+◎ prepend() - 콘텐츠를 선택한 요소 내부의 시작 부분에서 삽입
+◎ after() - 선택한 요소 뒤에 컨텐츠 삽입
+◎ before() - 선택된 요소 앞에 컨텐츠 삽입
+
+
+<p>  중앙  </p>  이렇게 태그가 있을경우
+
+ 
+append() 는    <p>  중앙  -여기에 값이들어감-</p>
+
+prepend() 는   <p>-여기에 값이들어감-  중앙  </p>
+
+after() 는        <p>  중앙  </p>-여기에 값이들어감-
+
+before() 는      -여기에 값이들어감-<p>  중앙  </p> 
+
+
+2024.10.22
+
+jquery 호출 방법 
+<script src="./제이쿼리/js/jquery-3.7.1.js"></script>
+    -- 다운로드 방식으로 불러오기 --
+
+<script src="http://code.jquery.com/jquery-3.7.1js"></script>
+    -- 네트워크 방식 --
+
+
+<head>안 쪽에 
+<script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+항상 입력해 주기.
+
+
+2024.10.28
+내용) 마우스 스크롤 하기 
+
+.scrollTop();
+세로 기준의 스크롤 값
+
+ex)
+ $(window).scroll(function(){
+        var sct = $(this).scrollTop();
+    // 마우스의 세로 스크롤의 값을 sct에 저장
+    });    
+
+.offset().left;
+// 마우스 가로 스르롤의 왼쪽.
+
+2024.10.29
+내용) 마우스 스크롤과 휠 이벤트 효과
++ 팝업 창 만들기
+
+.draggable();
+마우스로 클릭하며 드래그 하면마우스 포인터에 따라 같이 이동한다
+
+.mouseweel
+
+2024.10.30
+내용 ) 
+https://bxslider.com/options
+ 옵션에 대해 공부함 .
+**참고 bx 파일....!
+2024.11.05
+
+document.write("<p><b>window.width : <b>" + window.innerWidth + "<p>");
+// 브라우저 화면의 넓이를 측정  ( 스크롤 칸으로도 넓이는 감소한다.)
+document.write("<p><b>window.height : <b>" + window.innerHeight + "<p>");
+// 브라우저 화면의 높이를 측정
+
+2024.11.06
+
+.getComputedStyle - DOM 요소의 현재 스타일을 가져오기 위한 메서드이다.
+ 이 메서드를 사용하면 특정 요소에 적용된 모슨 스타일 속성과 그 값에 대한 정보를 얻을 수 있다
+
+.

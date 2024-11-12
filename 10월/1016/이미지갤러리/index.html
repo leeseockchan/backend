@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/img.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <ul id="nav">
+            <li><a href="img/lop0.jpg" class="active"><img src="img/thumb0.jpg" alt=""></a></li>
+            <li><a href="img/lop1.jpg"><img src="img/thumb1.jpg" alt=""></a></li>
+            <li><a href="img/lop2.jpg"><img src="img/thumb2.jpg" alt=""></a></li>
+            <li><a href="img/lop3.jpg"><img src="img/thumb3.jpg" alt=""></a></li>
+            <li><a href="img/lop4.jpg"><img src="img/thumb4.jpg" alt=""></a></li>
+            <li><a href="img/lop5.jpg"><img src="img/thumb5.jpg" alt=""></a></li>
+            <li><a href="img/lop6.jpg"><img src="img/thumb6.jpg" alt=""></a></li>
+            <li><a href="img/lop7.jpg"><img src="img/thumb7.jpg" alt=""></a></li>
+        </ul>
+        <div id="window"><img src="img/lop0.jpg" /></div>
+    </div>
+
+    <script>
+
+        var navLinks = document.querySelectorAll('#nav li a');
+        var win = document.querySelector("#window img");
+
+        navLinks.forEach(function (a) {
+            a.addEventListener("click", function (event) {
+                event.preventDefault();
+                // 기본적인 html 동작 차단 (a link 차단)
+                // return --false와 같다.
+                var img_url = a.getAttribute('href');
+                // alert(img_url); --잘 실행 되는지 확인하려고 사용--
+                win.setAttribute('src', img_url);
+
+                navLinks.forEach(function (nk) {
+                    nk.classList.remove('active');
+                    // active라는 클래스명이 있는 것을 지워라
+                });
+                a.classList.add('active');
+                // 'active'라는 클래스명을 추가해라
+            });
+        });
+    </script>
+</body>
+
+</html>

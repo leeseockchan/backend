@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 사용자의 이름을 입력받아 인사하는 프로그램
+        var userName = prompt("이름을 써라 : ", "아무개") ;
+        document.write("안녕하세요 "+userName+"님아","<br>");
+        document.write(`안녕하세요 ${userName}, 님! <br>`);
+
+        // 배열에 숫자 저장하기
+        var numbers = [11,22,33,44,55];
+        document.write(numbers[0],"<br>");
+        document.write(numbers[1],"<br>");
+        document.write(numbers[2],"<br>");
+        document.write(numbers[3],"<br>");
+        document.write(numbers[4],"<br>");
+
+        for(var i=0; i<5; i++){
+            document.write(numbers[i],"<br>");
+        }
+
+        for(var i=0; i<numbers.length; i++){
+            document.write(numbers[i],"<br>");
+        }
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

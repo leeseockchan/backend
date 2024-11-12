@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function 연습</title>
+<style>
+    
+</style>
+<script>
+    
+    function myFnc(name,country){
+        var intro = document.querySelector('#introduce');
+        intro.innerHTML = "안녕하세요" + name + " 입니다.<br> 저의 국적은 "+ country+" 입니다.";
+
+    }
+    
+</script>
+</head>
+<body>
+    
+    <button onclick="myFnc('김정은', '북한')">북한</button>
+    <button onclick="myFnc('윤석열', '한국')">한국</button>
+    <button onclick="myFnc('바이든', '미국')">미국</button>
+    <p id="introduce"></p>
+
+</body>
+</html>

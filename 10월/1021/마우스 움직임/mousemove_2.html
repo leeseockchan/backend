@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 위치 별 좌표 찍기</title>
+    <link rel="stylesheet" href="css/mousemove_2.css">
+    <script>
+        document.onmousemove = function(e){
+            var x = e.pageX;  // event 객체의 x 좌표 
+            var y = e.pageY;  // event 객체의 y 좌표
+            
+            document.getElementById('m1').innerHTML = x;
+            document.getElementById('m2').innerHTML = y;
+        }
+    </script>
+
+</head>
+<body>
+    <div id="wrap">
+        <h1 id="m1">0000</h1>
+        <h1 id="m2">0000</h1>
+    </div>
+</body>
+</html>

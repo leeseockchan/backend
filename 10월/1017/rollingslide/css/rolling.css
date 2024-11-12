@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    float: left;
+    width: 80px;
+ /* 사진 한장의 크기는 72px 이지만  
+    margin - 8 까지 합쳐서 넓이를 80으로 함*/
+}
+h1{
+    text-align: center;
+}
+#banner_wrap{
+    width: 260px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    border: 1px solid #aaa;
+}
+
+#frame{
+    width: 232px;
+    height: 54px;
+    position: relative;
+    margin: 10px auto;
+    border: 1px solid blue;
+    /* overflow: hidden; */
+}
+#banner{
+    width: 800px;
+    height: 54px;
+    border: 1px solid red;
+    transition: all 0.5s;
+}

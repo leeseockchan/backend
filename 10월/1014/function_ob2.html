@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function 연습</title>
+<script>
+    var color = ["white", "yellow","aqua", "purple","black"];
+    var i = 0;
+
+    function changeColor(){
+        i++;
+        
+        if(i >=color.length){
+            i= 0;
+        }
+        // console.log(i);
+        // 콘솔 창으로 i의 값 변화 확인하기 위해 사용했음.
+
+        // var bodyTag = document.getElementById("theBody");
+        // bodyTag.style.backgroundColor = color[i];
+
+        document.getElementById("theBody").style.backgroundColor = color[i];
+        // 위의 두줄을 이렇게 한줄로도 코딩이 가능하다.
+    }
+</script>
+
+
+</head>
+<body id="theBody">
+    <button onclick="changeColor();">배경 색 바꾸기</button>
+</body>
+</html>

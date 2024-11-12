@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 넘기기</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>클래스 추가/삭제 예시</h1>
+
+    <div id="box" class="box">박스</div>
+
+    <button onclick="addClass()">클래스 추가</button>
+    <button onclick="removeClass()">클래스 삭제</button>
+    <button onclick="toggleClass()">클래스 토글</button>
+    <script>
+        var box = document.getElementById('box');
+        // class를 호출 할때 classList를 사용해야 한다.
+        function addClass() {
+            box.classList.add('highlight');
+            //highlight 라는 class를 추가(add)하라는 뜻.
+        }
+        function removeClass() {
+            box.classList.remove('highlight');
+            //highlight 라는 class를 삭제(remove)하라는 뜻.
+        }
+        function toggleClass() {
+            box.classList.toggle('highlight');
+            //highlight 라는 class를 토글(toggle)하라는 뜻.
+        }
+
+    </script>
+</body>
+
+
+</html>

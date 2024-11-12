@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date_Object</title>
+<script>
+    var today = new Date();
+
+    var nowYear = today.getFullYear();
+    var nowMonth = today.getMonth()+1;
+    var nowDate = today.getDate();
+    var nowDay = today.getDay();
+    var nowHours = today.getHours();
+    var nowMinutes = today.getUTCMinutes();
+    var nowSecon = today.getSeconds();
+
+    var yoil;
+
+    if(nowDay=='0'){
+        yoil = "일";
+    }else if(nowDay=='1'){
+        yoil = "월";
+    }else if(nowDay=='2'){
+        yoil = "화";
+    }else if(nowDay=='3'){
+        yoil = "수";
+    }else if(nowDay=='4'){
+        yoil = "목";
+    }else if(nowDay=='5'){
+        yoil = "금";
+    }else if(nowDay=='6'){
+        yoil = "토";
+    }
+
+    document.write("<h1>오늘 날짜 정보</h1>");
+    document.write("현재 년도: "+nowYear+"년","<br>")
+    document.write("현재 월: " +nowMonth+"월", "<br>");
+    document.write("현재 날짜: " +nowDate+"일", "<br>");
+    document.write("현재 요일: " +yoil+"요일", "<br>");
+    document.write("현재 시간: " +nowHours+"시", "<br>");
+    document.write("현재 분: " +nowMinutes+"분", "<br>");
+    document.write("현재 초: " +nowSecon+"초", "<br>");
+    
+</script>
+</head>
+<body>
+    
+</body>
+</html>

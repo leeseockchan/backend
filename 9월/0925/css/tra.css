@@ -1,0 +1,86 @@
+*{margin: 0; padding: 0;}
+
+h1{
+    width:400px; height:70px;
+    margin-bottom: 20px;
+    border: 3px solid #ccc;
+    background-color: brown;
+}
+
+p{
+    font-size: 30px;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+
+.tra{
+    background-color: #ae5329;
+   
+    transform: translate(-400px,0);
+    transition: all 0.5s;
+}
+
+.btn1:hover + .tra{
+     /* 마우스를 btn1에 올리면현재 위치에서 x 400px 만큼 이동 */
+    transform: translate(400px,0);
+}
+
+.rot1{
+    margin: 200px 0;
+    transform: rotate(0deg);
+    transition: all 0.5s;
+}
+.btn2:hover + .rot1{
+    /* 마우스를 btn2에 올리면 원하는 각도로 돌아간다. */
+    transform: rotate(10000deg);
+}
+
+.rot2{
+    margin: 200px 0;
+    transform: rotateY(0deg);
+    transition: all 0.5s;
+}
+.btn3:hover + .rot2{
+    /* 마우스를 btn3에 올리면 Y축을 기준으로 입력한만큼 돌아간다. */
+    transform: rotateY(20000deg);
+}
+
+.rot3{
+    margin: 200px 0;
+    transform: rotateX(0deg);
+    transition: all 0.5s;
+}
+.btn4:hover + .rot3{
+    /* 마우스를 btn4에 올리면 X축을 기준으로 입력한만큼 돌아간다. */
+    transform: rotateX(2000deg);
+}
+
+.sca{
+    margin: 50px 0;
+    transform: scale(1);
+    transition: all 0.5s;
+}
+.btn5:hover + .sca{
+    /* 마우스를 btn5에 올리면 입력한 숫자만큼 크기가 커진다. */
+    transform: scale(13);
+}
+
+.ske{
+    margin: 50px 0;
+    transform: skewX(0deg);
+    transition: all 0.5s;
+}
+.btn6:hover + .ske{
+    /* 마우스를 btn6에 올리면 입력한만큼 X축(왼쪽) 기준으로 기울어 진다. */
+    transform: skewX(10deg);
+}
+
+.sky{
+    margin: 50px 0;
+    transform: skewY(0deg);
+    transition: all 0.5s;
+}
+.btn7:hover + .sky{
+    /* 마우스를 btn7에 올리면 입력한만큼 Y축(오른쪽) 기준으로 기울어 진다. */
+    transform: skewY(10deg);
+}

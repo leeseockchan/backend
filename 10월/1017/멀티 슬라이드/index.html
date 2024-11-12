@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/mutslide.css">
+</head>
+
+<body>
+    <div class="slide_wrapper">
+        <ul class="slides">
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/4.jpg" alt=""></li>
+            <li><img src="img/5.jpg" alt=""></li>
+            <li><img src="img/6.jpg" alt=""></li>
+            <li><img src="img/7.jpg" alt=""></li>
+            <li><img src="img/8.jpg" alt=""></li>
+            <li><img src="img/9.jpg" alt=""></li>
+        </ul>
+    </div>
+    <p class="controls">
+        <span class="prev">prev</span>
+        <span class="next">next</span>
+    </p>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slide = document.querySelectorAll('.slides li');
+        let currentIdx = 0;
+        const slideCount = slide.length;
+        const slideWidth = 300;
+        const slideMargin = 30;
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const sl = slides.style.width = (slideWidth + slideMargin) * slideCount - slideMargin + "px";
+        // ( width--300, margin --30 ) * 9 - 30 = 2940
+        // alert(sl);
+
+        function moveSlide(num) {
+            slides.style.left = -(num * 330) + "px";
+            currentIdx = num;
+        }
+
+        nextBtn.addEventListener('click', function () {
+            if (currentIdx < slideCount - 3 ) {
+                moveSlide(currentIdx + 1);
+            }else {
+                moveSlide(0);
+            }
+        });
+
+        prevBtn.addEventListener('click', function(){
+            if(currentIdx > 0){
+                moveSlide(currentIdx -1);
+            }else{
+                moveSlide(slideCount -3);
+            }
+        })
+
+    </script>
+</body>
+
+</html>

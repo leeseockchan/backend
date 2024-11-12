@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 움직임에 따라 줄선 따라가기</title>
+    <link rel="stylesheet" href="css/mousemove_5.css">
+
+    <script>
+        document.addEventListener('mousemove', function (e) {
+            var x = e.pageX;
+            var y = e.pageY;
+            var element1 = document.getElementById('mouse_col');
+            var element2 = document.getElementById('mouse_row');
+
+            if (element1 || element2) {
+                element1.style.top = y + 'px';
+                element2.style.left = x + 'px';
+            }
+        })
+    </script>
+
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">main</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">skill</a></li>
+        <li><a href="#">work</a></li>
+        <li><a href="#">contact</a></li>
+    </ul>
+
+    <div id="mouse_col"></div>
+    <div id="mouse_row"></div>
+</body>
+
+</html>

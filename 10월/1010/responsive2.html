@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport 중요***                         device-width 사용중인 기기의 화면에 맞춤                        -->
+    <title>Document</title>
+<style>
+*{margin: 0px; padding: 0px;}
+    .box{
+        width: 25%;
+        height: 250px;
+    }
+    .box1{background-color: blueviolet;}
+    .box2{background-color: brown;}
+    .box3{background-color: chocolate;}
+    .box4{background-color: darkcyan;}
+
+@media screen and (max-width:600px) {
+    .box{float: none; width: 100%;}
+}
+@media screen and (min-width:601px) and (max-width:1023px) {
+    .box{float: left; width: 50%;}
+}
+
+@media screen and (min-width:1024px) {
+    .box{float: left;}
+}
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box box1">박스1</div>
+        <div class="box box2">박스2</div>
+        <div class="box box3">박스3</div>
+        <div class="box box4">박스4</div>
+    </div>
+</body>
+</html>

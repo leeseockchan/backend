@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 연습</title>
+
+<script>
+   
+    var mon = prompt("현재는 몇월 입니까?", "-월");
+    // 독서의 계절 가을이네요~! 9~11
+    // 여행 가기 좋은 여름이네요 6~8
+    // 햇살 가득한 봄이네요 ~~! 3~5
+    // 스키의 계절 겨울이네요 ~! 12,1,2
+    if(mon>=9&&mon<=11){
+        document.write("살찌기 아주 적합한 가을이 왔어요~~!");
+    }else if(mon>=6&&mon<=8){
+        document.write("살타기 아주 적합한 여름이 왔네요~");
+    }else if(mon>=3&&mon<=5){
+        document.write("햇살이 넘실~넘실~ 봄이 왔네요~~!");
+    }else if(mon<=12&&mon>=2){
+        document.write("스키타러 다니는 계절 겨울이네요~");
+    }else{
+        document.write("달력 다시 보고 오세요~");
+        location.reload();
+    }
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

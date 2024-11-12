@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도형에 마우스 올리면 사진 변환</title>
+    <link rel="stylesheet" href="css/mousechange.css">
+
+</head>
+
+<body>
+    <div id="container">
+        <p>도형 위에 마우스 포인터를 올려 놓으세요</p>
+        <ul>
+            <li class="rect"></li>
+            <li class="rect"></li>
+            <li class="rect"></li>
+            <li class="rect"></li>
+            <li class="rect"></li>
+        </ul>
+    </div>
+    <script>
+        var rects = document.querySelectorAll('.rect');
+        // 여러개의 클래스 선택자를 지정 할때는 querySelectorAll - querySelector 뒤에 All을 붙여준다.
+
+        rects.forEach(function (rect) {
+            
+            rect.addEventListener('mouseover', function () {
+                    rect.style.backgroundColor = 'green';
+                    rect.style.borderRadius = "50%";
+                    this.classList.remove('active');
+                });
+                rect.addEventListener('mouseout', function () {
+                    rect.style.backgroundColor = '';
+                    rect.style.borderRadius = "";
+                    this.classList.add('active');
+            });
+           
+        });
+    </script>
+
+
+</body>
+
+</html>

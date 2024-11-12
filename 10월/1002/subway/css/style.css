@@ -1,0 +1,611 @@
+*{margin:0; padding:0;}
+a{text-decoration:none; color:#333;}
+ul,li{list-style:none;}
+.cf::after{
+    content:'';
+    display:block;
+    clear:both;
+ }
+
+ body{
+    overflow-x: hidden;
+    /*반응형 만들때 반드시 넣어야 한다. */
+    /* 하단 (좌우 스크롤)이 보이지 않는다. */
+ }
+
+ header{
+    width: 100%;
+    height: 165px;
+    border-top:5px solid #009223;
+	position:relative;
+    z-index: 10;
+ }
+
+#h_top{
+    width:1200px;
+    height:90px;
+    margin: 0 auto;
+    /* 중앙정렬 */
+}
+#h_top>a{
+    position: absolute;
+    /*  margin: 0 auto; 중앙정렬 할 수 없음 */
+    width:202px;
+    height:40px;
+    left:50%;
+    transform: translate(-50%, 0);
+    /* 중앙정렬 */
+    top:25px;
+}
+#h_top>a img{
+    display: block;width: 100%;
+}
+#h_top ul{
+    /* position: absolute;
+    right:0;
+    top:30px; header 가 relative이므로 안됨*/
+    float: right;
+    margin-top: 30px;
+    /* #h_top 의 오른쪽으로 배치 */
+}
+
+#h_top ul li{
+    float: left;
+    margin-left: 15px;
+}
+#h_top ul li a{
+    display: block;
+    height:20px;
+    padding: 5px 13px;
+}
+#h_top ul li a.earth{
+    width: 32.5px;
+    text-indent: -9999px;
+    /* 내어쓰기 - 글자를 숨길수있다. */
+    padding: 5px 0;
+    background: url(../img/icon_global_subway.png) no-repeat center;
+}
+
+nav {
+    width: 100%;
+    height:75px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+nav > ul{
+    width: 1200px;
+    /* 중앙정렬을 해야하므로 넓이를 지정 */
+    height:75px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 100px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 15;
+}
+nav > ul > li{
+    float: left;
+}
+nav > ul > li > a{
+    /* 대표매뉴 a */
+    display: block;
+    width:200px;
+	height:75px;
+	font-size:18px;
+	font-weight:bold;
+	line-height:75px;
+}
+nav ul ul a{
+    font-size: 15px;
+    color:#666;
+    padding: 8px 0 9px;
+    display: block;
+    letter-spacing: -0.05;
+    /* 글자간격 */
+    font-weight: bold;
+}
+nav ul li ul li{
+    width: 200px;
+}
+nav ul li ul{
+    position: absolute;
+    top:75px;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    /*  height: 0;  overflow: hidden;
+    0이상이면 숨겨라 - 하위메뉴가 안보임*/
+    transition: all 0.2s;
+    padding-top: 20px;
+}
+nav ul:hover li ul{
+    height: 240px;
+}
+
+.shadow{
+    position: absolute;
+    left:0;
+    top: 165px;
+    /* header 가  relative이므로 위에서 부터 165
+    떨어진곳에 .shadow가 펼쳐져야함 */
+    width: 100%;
+    background-color: #fff;
+    height:0px;
+    transition: all 0.2s;
+}
+/* nav> ul 과 shadow가 형제 
+둘다 position을 가지고 있다.
+  shadow 가 nav> ul 보다 나중에 만들어 졌으므로
+  메뉴 안보임 
+  해결책  nav> ul 에 z-index값을 준다.*/
+nav ul:hover + .shadow{
+    height:250px;
+}
+
+
+section{
+    width: 100%;
+    position: relative;
+}
+
+.slide{
+    height:440px;
+    width:100%;
+    position: relative;
+}
+.slide .sg{
+    width:1920px;
+    height:440px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slide .sg a{
+    width:1920px;
+    height:440px;
+    position: absolute;
+    left:0;
+}
+
+.slide .sg a.i_01{
+    background: url(../img/00_써브웨이_main_02_20200427112753722.jpg) no-repeat center;
+}
+.slide .sg a.i_02{
+    background: url(../img/main_pc_1920x440_20200427112254027.jpg) no-repeat center;
+    left: 100%;
+}
+.slide .sg a.i_03{
+    background: url(../img/main_pc_1920x440_20200528061058713.jpg) no-repeat center;
+    left: 200%;
+}
+.slide .sg a.i_04{
+    background: url(../img/main_pc_1920x440_20200529050816305.jpg) no-repeat center;
+    left: 300%
+}
+
+/* slode 사진 위에 페이지 점 */
+.slide .dot{
+    position: absolute;
+    left: 50%;
+    margin-left: 500px;
+    bottom: 40px;
+    width: 100px;
+    height: 10px;
+}
+.slide .dot a{
+    display: block;
+    float: left;
+    width: 10px;
+    height: 10px;
+    text-indent: -9999px;
+    background-color: #ddd;
+    margin: 0 5px;  
+    border-radius: 30px;
+}
+.slide .dot a.on{
+    background-color: #ffc300;
+    width: 30px;
+}
+
+/* 매장찾기 및 가맹점문의 버튼 */
+#sub{
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+}
+#sub .sub_wrap{
+    position: absolute;
+    right: 15px;
+    top: -30px;
+}
+#sub .sub_wrap a{
+    display: block;
+    width: 300px;
+    height: 80px;
+    float: left;
+    font-size: 22px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 25px;
+}
+        /* 매장찾기 버튼 */
+.sw_left{
+    padding-left: 135px;
+    background: #ffce32 url(../img/icon_map.png) no-repeat 35% 50%;
+    border-radius: 30px 0 0 0;
+    /* 좌측 상단, 우측 상단, 우측하단, 좌측하단 (시계방향)*/
+    color: #292929;
+}
+        /* 가맹점신청·문의 버튼 */
+.sw_right{
+    color: #ffff;
+    padding-left: 100px;
+    background: #009223 url(../img/icon_franchise.png) no-repeat 20% 50%;
+    border-radius: 0 0 30px 0;
+}
+
+#section02{
+    width: 100%;
+}
+.s02_wrap{
+    width: 1200px;
+    height: 560px;
+    margin: 0 auto;
+    padding-top: 60px;
+    position: relative;
+}
+
+/* Subway's Menu 글자에 겹쳐있는 노란색 */
+.menu_top{
+    width: 1200px;
+    height: 77px;
+    background: url(../img/bul_tit.png) no-repeat 0 50%;
+}
+.menu_top h3{
+    width: 50%;
+    height: 77px;
+    padding: 12px 0 0 25px;
+    font-size: 40px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.menu_top .mt_right{
+    float: right;
+    margin-top: 30px;
+}
+.menu_top .mt_right li{
+    float: left;
+    padding-right: 25px;
+    margin-right: 23px;
+    position: relative;
+}
+.menu_top .mt_right li a{
+    display: block;
+    font-size: 16px;
+    color: #666;
+    font-weight: bold;
+}
+.menu_top .mt_right li.on a{
+    color: #009223;
+}
+.menu_top .mt_right li::after{
+    content:'';
+    width: 1px;
+    height:13px;
+    right: 0;
+    top: 3px;
+    background-color: #ddd;
+    position: absolute;
+}
+.menu_top .mt_right li:nth-child(4)::after{
+    /* 맨 끝에 줄을 보이지 않게 해 */
+    display: none;
+}
+
+/* 햄버거 나열 */
+.menu_wrap .menu{
+    width: 1200px;
+    height: 320px;
+    overflow: hidden;
+    margin-top: 33px;
+    padding-left: 30px;
+}
+.menu ul li{
+    width: 260px;
+    height: 320px;
+    float: left;
+    text-align: center;
+    padding: 0 5px;
+    margin-right: 30px;
+    position: relative;
+}
+.menu ul li::after{
+    content:'';
+    width: 98px;
+    height: 98px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    background: url(../img/btn_more.png) no-repeat 0 0;
+    margin: -22px 0 0 -22px;
+    opacity: 0;
+}
+.menu ul li:hover::after{
+    opacity: 1;
+}
+/* .menu ul li:first-child{
+    margin-left: 0;
+} */
+.menu ul li img{
+    width: 100%;
+    height: 182px;
+}
+.menu ul li p{
+    font-size: 13px;
+    color: #999;
+    letter-spacing: -0.04em ;
+}
+.menu ul li strong{
+    display: block;
+    margin: 2px 0 10px;
+    text-align: center;
+}
+/* .menu ul li:hover{
+    width: 260px;
+    margin-right: 0;
+} */
+.menu ul li:hover img{
+    width: 350px;
+    height: 238px;
+}
+.menu ul li:hover strong{
+    font-size: 22px;
+    margin-top: -10px;
+}
+.menu ul li:hover p{
+    opacity: 0;
+}
+.s02_wrap a.prev{
+    top: 50%;
+    left: -150px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    border: 1px solid #333;
+    text-indent: -9999px;
+    background: url(../img/icon_event_slider_arr.png) no-repeat 0 0;
+}
+.s02_wrap a.prev:hover{
+    background-position: 0 -50px;
+}
+.s02_wrap a.next{
+    top: 50%;
+    right: -150px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    border: 1px solid #333;
+    text-indent: -9999px;
+    background: url(../img/icon_event_slider_arr.png) no-repeat -50px 0;
+}   
+.s02_wrap a.next:hover{
+    background-position: -50px -50px;
+}
+
+/* ====================================================== */
+#section03{
+    width: 100%;
+    height:790px;
+    background: url(../img/bg_content.gif) repeat 0 0;
+}
+.s03_wrap{
+    width: 1300px;
+    height:790px;
+    margin:0 auto;
+	padding:80px 0;
+	box-sizing:border-box;
+}
+.content{
+    width: 100%;
+    height:300px;
+}
+.cont_01{
+    float:left;
+    width: 400px;
+    height:100%;
+    background: url(../img/bg_utilization.png) no-repeat 0 0;
+    margin-left: 55px;
+    position: relative;
+}
+.cont_02{
+    float: right;
+    width:825px;
+    height:100%;
+    background: url(../img/img_subway_history.png) no-repeat 0 0;
+    position: relative;
+}
+.con_top h3{
+    height: 80px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 40px;
+    letter-spacing: -0.03em;;
+}
+.cont_01 h3{
+    position: absolute;
+    left: 39px;
+    top: 39px;
+}
+.cont_02 h3{
+    position: absolute;
+    left: 410px;
+    top: 38px;
+}
+.con_top a{
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 8px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+}
+.cont_01 a{
+    position: absolute;
+    left: 41px;
+    bottom: 42px;
+}
+.cont_02 a{
+    position: absolute;
+    left: 410px;
+    bottom: 42px
+}
+
+
+.con_bott{
+    margin-top: 30px;
+}
+.cont_03{
+    float: left;
+    width: 870px;
+    height: 100%;
+    background-color: #fff;
+    margin-left: 55px;
+    position: relative;
+    border-radius: 30px 0 30px 0;
+}
+.cont_03 .new{
+    float: left;
+    margin-top: 75px;
+    margin-left: 60px;
+}
+.cont_03 .new h2{
+    font-size: 30px;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background: url(../img/bul_tit.png) no-repeat 0 0;
+}
+.cont_03 .new p{
+    color: #666;
+    text-align: center;
+}
+.cont_03 ul{
+    float: left;
+    margin-top: 76px;
+    margin-left: 100px;
+}
+.cont_03 ul li a{
+    display: inline-block;
+    font-size: 16px;
+    color: #292929;
+    letter-spacing: -0.04em;
+    margin-top: 21px;
+    font-weight: bold;
+}
+.cont_03 ul li:first-child a{
+    margin-top: 0;
+}
+.cont_03 ul li a:hover{
+    color: #009223;
+    text-decoration: underline;
+}
+.cont_04{
+    float: left;
+    width: 270px;
+    height: 100%;
+    margin-left: 45px;
+    background: url("../img/270X300\ \(1\)_20230829025721267.jpg");
+    /* "" 또는 '' 으로 묶어서 사진의 경로 확실히 주기 */
+    border-radius: 0 30px 0 30px;
+    position: relative;
+}
+/* ==================================================================== */
+
+#section04 ul{
+    width:1200px;
+    height:150px;
+    margin: 0 auto;
+    padding: 40px 0;
+    /* 위아래 패딩 80 포함 150px */
+    box-sizing: border-box;
+    display: flex;
+    /* 부모에게 flex를 주면 자식이 나열 */
+    justify-content: space-between;
+    /* 여백을 균등하게 정렬 */
+}
+#section04 ul li{
+    margin-left: 80px;
+	padding-top:1px;
+    
+}
+#section04 ul li a{
+    display: flex;
+    height:70px;
+    
+}
+/* #section04 ul li a div{
+    display: inline-block;
+    vertical-align: top;
+} */
+#section04 ul li a div:nth-child(1){
+    width: 70px;
+    height:70px; 
+    margin-right: 20px;
+}
+/* 배경그림이 들어있는 div */
+
+
+#section04 ul li a div.icon1{
+    background: url(../img/icon_quickmenu.png) no-repeat 0 0;
+}
+#section04 ul li a div.icon2{
+    background: url(../img/icon_quickmenu.png) no-repeat -70px 0;
+}
+#section04 ul li a div.icon3{
+    background: url(../img/icon_quickmenu.png) no-repeat -140px 0;
+}
+#section04 ul li a .icon4{
+	background:url(../img/icon_quickmenu.png) no-repeat -210px 0;
+}
+
+#section04 ul li a .tit{
+    font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 0.0.4em;
+	/* padding-left:90px; */
+	padding-top:8px;
+}
+#section04 ul li a .txt{
+	font-size:13px;
+	font-weight:bold;
+	margin-top: 6px;
+    letter-spacing: -0.02em;
+	/* padding-left:90px; */
+}
+
+
+footer{
+    width: 100%;
+    height: 151px;
+    background-color: #292929;
+    color:#666666;
+    font-size: 14px;
+    padding: 22px 0;
+    position: relative;
+}
+.fot ul{
+    margin: 0 auto;
+}
+
+.fot strong{
+    color: #bbbbbb;
+}

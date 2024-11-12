@@ -1,0 +1,103 @@
+*{margin: 0; padding: 0;}
+
+.wrap{
+    width: 830px;
+    height: 310px;
+    border: 1px solid #333;
+    margin: 100px auto 0;
+    position: relative
+}
+
+.box{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    display: none;
+}
+
+.box img{
+    display: block;    
+}
+
+.box1{      /* 제일 왼쪽 사진 */
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.box2{      /* 왼쪽에서 아래 사진 */
+    top: 160px;
+    left: 0;
+    display: block;
+}
+
+.box3{      /* 두번째 고양이 긴 사진 */
+    height: 310px;
+    left: 210px;  
+    top: 0;
+    display: block;
+}
+
+.box4{      /* 세번째 사진 */
+    top: 0;
+    left: 420px;
+    display: block;
+}
+
+.box5{      /* 네번째 사진 */
+    top: 0;
+    right: 0;
+    display: block;
+}
+
+.box6{      /* 마지막 가로로 긴 고양이 사진 */
+    margin-left: 420px;
+    bottom:0;
+    display: block;
+}
+
+.box::before{
+    content:"";/* 반드시 기입 */
+    width:0%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,255,0.5);
+    transition:all 0.4s;
+}
+
+.box:hover::before{
+    width: 100%
+}
+
+.box6::before{
+        width: 100%;
+        height: 0%;
+}
+
+.box6:hover::before{
+        height: 100%
+}
+    
+.box p{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 30px;
+    box-sizing: border-box;
+    /* border, padding 포함 100%; */
+    color: #fff;
+    text-align: center;
+    transition: all 0.4s;
+    /* 투명도 0 */
+    opacity: 0;
+    background: url(../images/more.png) no-repeat 50% 80%;
+}
+
+.box:hover p{
+    /* 투명도 1 */
+    opacity: 1;
+}

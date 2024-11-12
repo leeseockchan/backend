@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.cf::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.bigbox {
+    width: 1440px;
+    height: 650px;
+    margin: 0 auto;
+}
+
+.bigbox h1 {
+    margin-left: 40px;
+    height: 50px;
+}
+
+.solbox {
+    display: flex;
+}
+
+.grey {
+    width: 480px;
+    height: 400px;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.grey h2 {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.grey p {
+    padding: 20px;
+    font-size: 16px;
+}
+
+.buy {
+    width: 200px;
+    height: 50px;
+    color: #ffff;
+    background-color: black;
+    font-size: 15px;
+    transition: all 0.4s;
+    border: none;
+}
+
+.buy:hover {
+    background-color: grey;
+}
+
+
+/* 핑크핑크 핳ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ핑크 */
+.bigbox2 {
+    width: 1440px;
+    height: 500px;
+    margin: 50px auto;
+}
+
+.seconbox {
+    display: flex;
+}
+
+.seconbox .pink {
+    width: 480px;
+    height: 330px;
+    background-color: #f3dae0;
+    text-align: center;
+    padding-top: 170px;
+
+}
+
+.pink .buy2 {
+    width: 200px;
+    height: 50px;
+    color: #ffff;
+    background-color: black;
+    font-size: 15px;
+    margin-top: 20px;
+    transition: all 0.4s;
+    border: none;
+}
+
+.pink .buy2:hover {
+    background-color: grey;
+}
+
+.pink h2 {
+    font-size: 50px;
+}
+
+.pink p {
+    margin: 10px auto;
+}

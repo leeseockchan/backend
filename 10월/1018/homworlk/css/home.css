@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,
+li {
+    list-style: none;
+}
+
+.bottom_tab {
+    width: 400px;
+    margin: 200px auto;
+}
+
+p {
+    /* 범위 넘어가면 글자 표기안함 */
+    width: 380px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 30px auto;
+    font-weight: bold;
+}
+
+.doubletab {
+    display: flex;
+}
+
+.doubletab li {
+    width: 30%;
+    text-align: center;
+
+}
+
+.bottom_tab .doubletab li a {
+    display: block;
+    padding: 20px 0;
+    color: black;
+    background-color: #d9d9d9;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.bottom_tab .doubletab li .first_tab {
+    background-color: #32557f;
+    color: #ffff;
+}
+.contents{
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* 메뉴 아래 글씨 안보이게 */
+.contents ul{
+    display: none;
+}
+/* 첫번째 메뉴판 글씨들 표시 */
+.contents ul:first-child{
+    display: block;
+}

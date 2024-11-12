@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 이미지 반응형</title>
+    <link rel="stylesheet" href="css/keydown_2.css">
+</head>
+
+<body>
+    <div id="cat-container">
+        <img id="cat" src="img/1.png" alt="Funny Cat">
+    </div>
+</body>
+
+</html>
+<script>
+
+    const cat = document.querySelector('#cat');
+    let posX = 200;
+    let posY = 200;
+
+    document.addEventListener('keydown', function (event) {
+        // console.log(event.key);
+        moveCat(event.key);
+    });
+
+    function moveCat(direction) {
+        const step = 20;
+
+        switch (direction) {
+            case 'ArrowUp':
+                posY -= step;
+                break;
+            case 'ArrowDown':
+                posY += step;
+                break;
+            case 'ArrowLeft':
+                posX -= step;
+                break;
+            case 'ArrowRight':
+                posX += step;
+                break;
+        }
+        cat.style.transform = `translate(${posX}px, ${posY}px)`;
+    }
+
+
+</script>
