@@ -1,0 +1,29 @@
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}
+
+
+91ca45f7940d85545c61f533cd1fce96
+나의 api 주소값
+
+https://openweathermap.org/city/1835553
+1835553 - 상단의 도시값을 의미한다
+이 곳은 수원이다.
+
+http://api.openweathermap.org/data/2.5/forecast?id=1835553&appid=91ca45f7940d85545c61f533cd1fce96
+				    수원	나의 api 값
+
+
+https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=ko
+제이슨 뷰어 (크롬) 설치시 코드가 나옴
+
+		
+출력되서 나온 온도는 kelvin 온도
+
+메뉴  - api - Parameters of API reponse – json - Units of measurement
+찾기 ctrl + f (Units of measurement)검색
+
+기본 kelvin
+&units=metric 뒤에 붙인다. (섭씨)
+&units=imperial(화씨)
+
+http://api.openweathermap.org/data/2.5/forecast?id=1835553&appid=91ca45f7940d85545c61f533cd1fce96&units=metric
+수원시의 온도 

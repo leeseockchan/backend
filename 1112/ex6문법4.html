@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 중첩된 객체 해제
+        const user = {
+            username: "John doe",
+            address: {
+                city: "New York",
+                zip: "12645"
+            }
+
+        };
+        // 중첩된 객체 해체
+        const{username, address:{city,zip}}=user;
+        document.write(username,"<br>");
+        document.write(city,"<br>");
+        document.write(zip,"<br>");
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

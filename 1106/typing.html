@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <title>typing</title>
+    <script>
+        $(function(){
+            var count = 0;
+            var text1 = $('#text');
+            var msg;
+            var comp;
+            var lll;
+            main();
+
+            function main(){
+                msg = text1.text();
+                // alert(msg);
+                comp = msg.length;
+                // alert(comp);
+                tatata();
+            }
+
+            function tatata(){
+                if(count <= comp){
+                    lll = msg.substring(0,count);
+                    text1.text(lll);
+                    count++;
+                    setTimeout(tatata,100);
+                }else{
+                    count = 0;
+                    main();
+                 }
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1 id="text">타이핑 효과를 시험해 보세요 타다다ㅏㅏ다다다 ㅏ이렇게 쳐질겁니다.</h1>
+</body>
+</html>

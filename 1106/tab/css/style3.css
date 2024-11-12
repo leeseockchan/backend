@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.tab {
+    width: 280px;
+    height: 200px;
+    border: 1px solid #333;
+}
+
+.tab_menu {
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+}
+
+.tab_menu li {
+    float: left;
+    width: 70px;
+    text-align: center;
+}
+
+.tab_menu li.on {
+    background-color: red;
+    font-weight: bold;
+    color: #fff;
+}
+
+.tab_list li {
+    display: none;
+}
+
+.tab_list li.on {
+    display: block;
+}

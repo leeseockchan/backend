@@ -1,0 +1,47 @@
+body {
+    height: 3300px;
+}
+
+h1 {
+    font-size: 100%;
+}
+
+.indicator {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+
+li {
+    list-style-type: none;
+    width: 60px;
+    height: 60px;
+    top: 40px;
+    position: fixed;
+    border-radius: 50%;
+}
+
+#item1 {
+    background: red;
+    left: 20px;
+}
+
+#item2 {
+    background: orange;
+    left: 100px;
+}
+
+#item3 {
+    background: yellow;
+    left: 180px;
+}
+
+#item4 {
+    background: green;
+    left: 260px;
+}
+
+#item5 {
+    background: blue;
+    left: 340px;
+}

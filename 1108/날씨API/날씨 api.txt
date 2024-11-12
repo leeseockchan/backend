@@ -1,0 +1,12 @@
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}
+
+
+91ca45f7940d85545c61f533cd1fce96
+나의 api 주소값
+
+https://openweathermap.org/city/1835553
+1835553 - 상단의 도시값을 의미한다
+이 곳은 수원이다.
+
+http://api.openweathermap.org/data/2.5/forecast?id=1835553&appid={91ca45f7940d85545c61f533cd1fce96}
+				    수원	나의 api 값
