@@ -22,9 +22,24 @@ public class Marray2 {
                 sum += scores[i][j];
             }
             double avg = (double) sum / scores[i].length;
-            System.out.printf("학생");
+            System.out.printf("학생%d의 총점 : %d 점, 평균: %.2f\n 점",i+1, sum, avg);
         }
         System.out.println();
 
+
+        int totalSum = 0;
+        int totalSub = 0;
+        // 숙제 전체 총점 전체 평균을 구하시오
+        for (int i = 0; i < scores.length; i++) {
+            // totalSub = totalSub + scores[i].length;
+            for (int j = 0; j < scores[i].length; j++) {
+                totalSum = totalSum + scores[i][j];
+            }
+
+        }
+        totalSub = scores[0].length * scores.length;    // 과목의 열의 개수와 행의 개수 
+        System.out.println("총 인원 = "+ totalSub); 
+        double totalAvg = (double)totalSum / totalSub;
+        System.out.printf("전체 총점 :  %d 점, 전체 평균 : %.2f 점",totalSum, totalAvg);
     }
 }
