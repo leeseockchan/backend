@@ -1,0 +1,31 @@
+.tab {
+    display: flex;
+    list-style: none;
+    height: 40px;
+    text-align: center;
+}
+
+.tab li {
+    width: 70px;
+    line-height: 40px;
+}
+
+.tab li.on {
+    background-color: red;
+    font-weight: bold;
+    color: #fff;
+}
+
+.tab_list {
+    width: 280px;
+    height: 200px;
+    border: 1px solid #333;
+}
+
+.tab_list div {
+    display: none;
+}
+
+.tab_list div.on {
+    display: block;
+}
