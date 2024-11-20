@@ -37,7 +37,7 @@ public class Jang {
                 System.out.println("삭제할 아이템 > ");
                 // 배열 중 일치하는 것 삭제하기
                 String delete = scan.nextLine();
-                cart = removeword(cart, delete);
+                cart = removeWord(cart, delete);
                 System.out.println(delete+"이(가) 카트에서 삭제 되었습니다.");
 
                 case 3: // 3. 카트 확인
