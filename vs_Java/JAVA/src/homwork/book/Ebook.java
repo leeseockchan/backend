@@ -76,14 +76,24 @@ public class Ebook {
                     System.out.println(upname);
                     if(upname.equals("")){
                         System.out.print("추가 수정을 원한다면 도서명을 입력해주세요 \n nema >>");
+                        newTitle = scan.nextLine();
                     }
+                    manager.upDateBook(upname);
+                    System.out.println("수정이 완료되었습니다.");
                     break;
                 case 7:
-                    System.out.println();
+                    System.out.println("테스트 중입니다.");
                     break;
                 
                 case 8:
-
+                    System.out.println("도서 현황 \n 도서 제목 입력 >> ");
+                    String bname = scan.nextLine();
+                    if(bname.equals("")){
+                        System.out.print("조회가 필요한 도서 제목을 입력하세요 \n 도서명 >> ");
+                        newTitle = scan.nextLine();
+                    }
+                    manager.informationBook(bname);
+                    System.out.println("조회 완료");
                     break;
                 case 9: 
                     System.out.println("시스템을 종료합니다.");

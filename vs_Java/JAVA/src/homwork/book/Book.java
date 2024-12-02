@@ -26,18 +26,12 @@ public class Book {
     // 생성자 생성
     public Book() {
     }
-    public Book(String title, String author, String code, double price, boolean inventory) {
-        this.title = title;
-        this.author = author;
-        this.code = code;
-        this.price = price;
-        this.inventory = inventory;
-    }
     public Book(String title, String author, String code, double price) {
         this.title = title;
         this.author = author;
         this.code = code;
         this.price = price;
+        this.inventory = true;
     }
     public Book(String title, String code, double price) {
         this.title = title;
@@ -87,7 +81,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "책 이름 : " + title + "저자 : " + author + "책의 코드 : " + code + "책의 가격 : " + price + "책 구매가능 여부 : "+(inventory ? "구매 가능" : "구매 불가능");
+        return "책 이름 : " + title + "\t저자 : " + author + "\t책의 코드 : " + code + "\t책의 가격 : " + price + "\t책 구매가능 여부 : "+(inventory ? "구매 가능" : "구매 불가능");
     }
  
 
