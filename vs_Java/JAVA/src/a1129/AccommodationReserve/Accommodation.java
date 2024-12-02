@@ -3,10 +3,10 @@ package a1129.AccommodationReserve;
 //숙소 클래스
 public class Accommodation {
     private String name; // 이름
-    private String location; //위치
-    private double pricePerNight; //가격
-    private boolean available; //예약가능한지
-    
+    private String location; // 위치
+    private double pricePerNight; // 가격
+    private boolean available; // 예약가능한지
+
     public String getName() {
         return name;
     }
@@ -39,8 +39,8 @@ public class Accommodation {
         this.available = available;
     }
 
-    public Accommodation(){
-        
+    public Accommodation() {
+
     }
 
     public Accommodation(String name, String location, double pricePerNight) {
@@ -50,15 +50,14 @@ public class Accommodation {
         this.available = true;
     }
 
-    public void book(){
+    public void book() {
         this.available = false;
     }
 
-
     @Override
     public String toString() {
-        return "숙소이름 = " + name + ", 위치=" + location + ", 숙박가격=" + pricePerNight
-                + ", 예약여부 =" + (available ?  "예약가능" : "예약불가능");
+        return "숙소이름 = " + name + ", 위치=" + location + ", 박당가격=" + pricePerNight
+                + ", 예약여부 =" + (available ? "예약가능" : "예약불가능");
     }
-  
+
 }

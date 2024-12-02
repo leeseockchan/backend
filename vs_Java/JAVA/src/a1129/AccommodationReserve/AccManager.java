@@ -78,7 +78,7 @@ public class AccManager {
         int menu = -1;
         boolean flag = true;
         Scanner sc = new Scanner(System.in);
-        Accommodation newA = new Accommodation();
+        Accommodation newA = new Accommodation();// 빈객체
         System.out.println(uname);
         for (Accommodation a : accommodations) { // 리스트를 순회하면 같은 이름이 있는지
             i++;
@@ -90,7 +90,7 @@ public class AccManager {
 
         }
         if (index != -1) { // 수정할 호텔이름이 있으면
-            System.out.print("수정할 정보 \n 1.숙박업소 이름 \t 2. 지역 \t 3. 가격\n >>");
+            System.out.print("뭐 수정할꼰뎅?\n 1.숙박업소 이름 \t 2. 지역 \t 3. 가격\n >>");
             menu = sc.nextInt();
             sc.nextLine();
             while (flag) {

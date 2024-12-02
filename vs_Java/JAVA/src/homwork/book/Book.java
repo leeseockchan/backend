@@ -9,6 +9,10 @@ public class Book {
     private String code; // 책의 코드
     private double price; // 책의 가격
     private boolean inventory;    // 책 재고
+    
+
+
+
 
 // "1. 예약 가능한 도서 조회");
 //             System.out.println("2. 도서 예약하기");
@@ -32,6 +36,11 @@ public class Book {
     public Book(String title, String author, String code, double price) {
         this.title = title;
         this.author = author;
+        this.code = code;
+        this.price = price;
+    }
+    public Book(String title, String code, double price) {
+        this.title = title;
         this.code = code;
         this.price = price;
     }
@@ -70,7 +79,9 @@ public class Book {
     public void setInventory(boolean inventory) {
         this.inventory = inventory;
     }
-
+    public void fail() {
+        this.inventory = false;
+    }
 
 
 
@@ -78,5 +89,6 @@ public class Book {
     public String toString() {
         return "책 이름 : " + title + "저자 : " + author + "책의 코드 : " + code + "책의 가격 : " + price + "책 구매가능 여부 : "+(inventory ? "구매 가능" : "구매 불가능");
     }
+ 
 
 }
