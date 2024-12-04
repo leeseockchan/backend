@@ -1,4 +1,4 @@
-package a1202.hak;
+package a1202.hak_createfile;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -6,9 +6,11 @@ import java.util.Scanner;
 public class StudentDAO {
     private ArrayList<StudentDTO> slist;
     Scanner sc = new Scanner(System.in);
+    FileClass file = new FileClass("student", "student_Grade");
 
-    public StudentDAO() {
+    public StudentDAO() {   // 생성 메소드
         slist = new ArrayList<StudentDTO>();
+        // 기본 데이터 - 4명의 더미데이터 생성
         StudentDTO s1 = new StudentDTO(0, "테스트1", 11, 100, 90, 80);
         StudentDTO s2 = new StudentDTO(0, "테스트2", 21, 90, 80, 70);
         StudentDTO s3 = new StudentDTO(0, "테스트3", 31, 80, 70, 100);
@@ -17,8 +19,9 @@ public class StudentDAO {
         slist.add(s2);
         slist.add(s3);
         slist.add(s4);
+        System.out.println(slist);
     }
-
+    
     private void insert(StudentDTO s) {
         slist.add(s);
     }
@@ -147,6 +150,24 @@ public class StudentDAO {
                 "-------------------------------------------------");
         for (int i = 0; i < slist.size(); i++) {
             System.out.println(slist.get(i).toString());
+        }
+    }
+
+    public void dataSave() throws Exception{
+        file.create();
+        String str = "이름\t\t 나이\t 국어\t 영어\t 수학\n"+
+        "------------------------------\n";
+        for(int i = 0 ;i < slist.size();i++){
+            str += slist.get(i).toString()+"\n";
+        }
+        file.write(str);
+    }
+
+    public void dataLoad(){
+        try{
+            file.read();
+        }catch(Exception e){
+            System.out.println("읽을 파일이 없습니다.");
         }
     }
 

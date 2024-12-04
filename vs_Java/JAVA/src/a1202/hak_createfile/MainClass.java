@@ -1,4 +1,4 @@
-package a1202.hak;
+package a1202.hak_createfile;
 
 import java.util.Scanner;
 
@@ -28,27 +28,38 @@ public class MainClass {
             System.out.println("0. 종료");
             System.out.print(">>");
             int choice;
-            
-            try{
+
+            try {
                 choice = sc.nextInt();
-            }catch(Exception e){
+            } catch (Exception e) {
                 choice = -1;
             }
-            
-            if(choice == 1){
+
+            if (choice == 1) {
                 test.userInsert();
-            }else if(choice == 2 ){
+            } else if (choice == 2) {
                 test.userDelete();
-            }else if(choice == 3){
+            } else if (choice == 3) {
                 test.userSelect();
-            }else if(choice == 4){
+            } else if (choice == 4) {
                 test.userUpdate();
-            }else if(choice == 5){
+            } else if (choice == 5) {
                 test.printAll();
-            }else if(choice == 0){
+            } else if (choice == 6) {
+                try {
+                    test.dataSave();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }else if(choice == 7 ){
+                test.dataLoad();
+            }
+            else if (choice == 0) {
                 System.out.println("종료 합니다.");
                 sc.close();
                 System.exit(0);
+            }else{
+                System.out.println("잘못 선택했습니다.");
             }
         }
     }

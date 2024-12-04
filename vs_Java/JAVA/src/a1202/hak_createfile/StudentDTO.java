@@ -1,4 +1,4 @@
-package a1202.hak;
+package a1202.hak_createfile;
 
 public class StudentDTO {
 
